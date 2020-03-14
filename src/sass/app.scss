@@ -1,0 +1,461 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, menu, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+main, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, main, menu, nav, section {
+  display: block;
+}
+
+/* HTML5 hidden-attribute fix for newer browsers */
+*[hidden] {
+  display: none;
+}
+
+body {
+  line-height: 1;
+}
+
+menu, ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+//-----------------
+
+
+body, html {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+  font-weight: 300;
+  font-size: .99em;
+  font-display: swap;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  letter-spacing: .025em;
+}
+
+h1 {
+  font-weight: 400;
+  font-size: 26px;
+  margin-bottom: 16px;
+}
+
+.push { margin-left: auto; }
+.bold { font-weight: 600; }
+
+.marginado {
+  margin-left: 12px;
+  margin-right: 12px;
+  &.link {
+    cursor: pointer;
+  }
+}
+
+
+
+#app {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  height: 100vh;
+
+  .nav {
+    .toolbar {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      .btn {
+        padding-right: 10px;
+        padding-left: 10px;
+        padding-top: 8px;
+        height: 24px;
+        cursor: pointer;
+       }
+    }
+
+    width: 190px;
+    font-weight: 500;
+
+    .navitem {
+      height: 32px;
+      line-height: 31px;
+      padding-left: 10px;
+
+    }
+  }
+
+
+  .content {
+    width: calc(100vw - 190px);
+
+    .bar {
+      height: 32px;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+
+      .dows {
+        svg {
+          width: 24px;
+          height: 24px;
+          padding: 4px;
+        }
+      }
+    }
+
+    .inputgroup {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-content: stretch;
+      align-items: flex-start;
+
+      .labelinput {
+        width: 105px;
+        height: 32px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding-left: 12px;
+      }
+
+      input.inpuntnewtask {
+        width: calc(100% - 134px);
+        height: 24px;
+        color: #ddd;
+        font-size: 16px;
+        padding: 4px;
+        padding-left: 12px;
+        letter-spacing: .025em;
+      }
+
+    }
+
+
+    .taskgroup {
+      .task {
+        height: 32px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        font-size: 15px;
+        font-weight: 500;
+        letter-spacing: .03em;
+
+        .player {
+          width: 32px;
+          height: 32px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+
+        }
+
+        .totaltasktimer {
+          width: 100px;
+          text-align: right;
+          padding-right: 10px;
+        }
+
+        .name {
+          padding-left: 6px;
+        }
+
+        .amounttak {
+          height: 28px;
+          width: 80px;
+          margin-top: 12px;
+        }
+
+        .openhistory {
+          height: 32px;
+          width: 32px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .ratechanger {
+          height: 32px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-right: 10px;
+          padding-left: 10px;
+
+          svg {
+            margin-right: 10px;
+          }
+        }
+
+
+      }
+
+      .note {
+        padding: 0px;
+      }
+
+
+      .detail {
+        padding-left: 33px;
+        transition-property: all;
+        transition-duration: .5s;
+        transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+        overflow: hidden;
+
+        .itemdetail {
+          transition: .5s;
+
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          height: 26px;
+          font-size: 13px;
+          padding-left: 10px;
+
+          .nombredia {
+            width: 70px;
+          }
+
+          .fecha {
+            width: 74px;
+          }
+
+          .inicio {
+            width: 90px;
+          }
+
+          .deletedetail {
+            margin-right: 4px;
+            margin-top: 2px;
+          }
+
+          div {
+            .fin {
+              width: 86px;
+              display: inline-block;
+            }
+
+            .duracion {
+              width: 86px;
+              display: inline-block;
+            }
+
+            .hourly {
+              width: 60px;
+              display: inline-block;
+            }
+
+            .amount {
+              width: 64px;
+              margin-left: 5px;
+              font-weight: 500;
+              display: inline-block;
+              text-align: right;
+            }
+          }
+        }
+      }
+
+      .totals {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: stretch;
+        align-items: center;
+        height: 30px;
+        font-weight: 500;
+
+        .totlaltime {
+          margin-left: 318px;
+
+          .ttimer {
+            width: 93px;
+            display: inline-block;
+          }
+        }
+
+        .totlarevenue {
+          width: 86px;
+          margin-left: 56px;
+          text-align: right;
+        }
+      }
+
+    }
+  }
+}
+
+
+
+
+
+#timenav {
+  .btn {
+    padding-right: 10px;
+    padding-left: 10px;
+    height: 40px;
+    width: 50px;
+  }
+  .btnhidden {
+    padding-right: 10px;
+    padding-left: 10px;
+    height: 40px;
+    width: 50px;
+  }
+}
+.error {
+  color: #f56c6c;
+  padding: 20px;
+}
+
+.config {
+  padding: 80px;
+}
+
+#note {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: stretch;
+  align-items: center;
+  textarea {
+    display: inline-block;
+    height: 44px;
+    max-height: 44px;
+    width: calc(100% - 173px);
+    font-size: 15px;
+    letter-spacing: .06em;
+    padding: 6px;
+  }
+  .btne {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:  center;
+    align-content: stretch;
+    align-items: center;
+    height: 56px;
+    line-height: 24px;
+    cursor: pointer;
+    width: 160px;
+  }
+}
+
+
+
+.expimp {
+  width: 100px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content:  center;
+  align-items: center;
+  height: 50px;
+  float: left;
+  margin-right: 20px;
+}
+
+#ConfigLabel {
+  input.configinput {
+    width: 300px;
+    height: 24px;
+    color: #ddd;
+    font-size: 16px;
+    padding: 4px;
+    padding-left: 12px;
+    letter-spacing: .025em;
+  }
+
+  .label {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+}
+
+.vue-dialog-button {
+  font-size: inherit!important;
+}
+.vue-dialog-button:not(:first-of-type) {
+  border-left: 0px solid #eee!important;
+}
+.vue-dialog .vue-dialog-buttons {
+  border-top: 0px solid #eee!important;
+}
+//grid -----------------
+.container {
+  margin: 0 auto;
+  max-width: 980px;
+  min-width: 320px;
+}
+
+.row {
+  display:flex;
+  flex-wrap: wrap;
+}
+
+.column {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 1;
+}
+
+.col-1 {
+  max-width: calc(100% / 12);
+}
+.col-2 {
+  max-width: calc(100% / 12 * 2);
+}
+.col-3 {
+  max-width: calc(100% / 12 * 3);
+}
+.col-4 {
+  max-width: calc(100% / 12 * 4);
+}
+.col-5 {
+  max-width: calc(100% / 12 * 5);
+}
+.col-6 {
+  max-width: calc(100% / 2);
+}
+

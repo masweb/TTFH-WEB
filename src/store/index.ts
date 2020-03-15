@@ -88,21 +88,26 @@ export default new Vuex.Store({
 
       async setCurrentCustomer(state, clientId) {
           state.activecustomer = clientId;
+          const y = state.currentyear
+          let m: string = state.currentmonth.toString()
+          m = ('0' + m).slice(-2)
+          const datecode =   m + y
           const cli = new app.Task;
-          const tasks = await cli.allTasksFromClient(clientId);
+          const tasks = await cli.allTasksFromClient(clientId, datecode);
           state.tasks = tasks
           const det = new app.TimeDetail;
-          for (let x = 0; x < tasks.length; x++) {
-              tasks[x].detail = await det.allDetailsFromTask( Number( tasks[x].id ) , state.datecode )
-          }
+          for (let x = 0; x < tasks.length; x++)
+              tasks[x].detail = await det.allDetailsFromTask( tasks[x].id , state.datecode )
+
           state.clients.find( c => {
               if (c.id === clientId){
                   state.client = c
                   state.hourlyRate = c.hourlyRate
               }
           })
-          state.currentview = 'ClientContent'
+          state.tasks = tasks
           this.commit('calcTime')
+          state.currentview = 'ClientContent'
       },
 
 
@@ -159,8 +164,7 @@ export default new Vuex.Store({
                                 amountPerHour =  state.client.hourlyRate
                            }
                            else amountPerHour =  state.tasks[x].hourlyRate
-                           console.log('timeString', timeString)
-                           const time = timeString.split(':').reduce((r, a, i) => r + a * Math.pow(60, -i), 0)
+                           const time = timeString.split(':').reduce((r, a: any, i) => r + a * Math.pow(60, -i), 0)
                            const result = (time * amountPerHour).toFixed(2)
                            const nres = parseFloat(result)
                            totaltask += nres

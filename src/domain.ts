@@ -28,23 +28,6 @@ class Client {
     }
 }
 
-
-
-
-// class TasksList {
-//     title: string;
-//     active: boolean;
-//     projectId: number;
-//     tasks: Array<Task>
-//     constructor( title: string, active: boolean, projectId: number ) {
-//         this.title = title;
-//         this.active = active;
-//         this.projectId = projectId;
-//         this.tasks = [];
-//     }
-// }
-
-
 class Task {
     id?: number;
     task: string;

@@ -63,10 +63,9 @@
                 const datecode = m + y
 
                 const cli = new app.Task
-                let tasks = await cli.allTasksFromClient( this.activecustomer );
+                let tasks = await cli.allTasksFromClient( this.activecustomer, datecode );
                 tasks = tasks.reverse()
                 const det = new app.TimeDetail
-
 
                 for (let x = 0; x < tasks.length; x++) {
 

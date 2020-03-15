@@ -1,6 +1,5 @@
 import domain from './domain'
 import repo from './repos/indexdb'
-import moment from "moment";
 import { Iclient, Itasks, Itimedetail } from './interfaces'
 
 class Client {
@@ -52,10 +51,7 @@ class Task {
         await conn.loadData(tasks)
     }
 
-    async allTasksFromClient( clientId: number ) {
-        const month = moment().format('MM');
-        const year = moment().format('YY');
-        const datecode = month + year
+    async allTasksFromClient( clientId: number,  datecode: string) {
         const conn = new repo.Task
         const tasks = await conn.allTasksFromClient( clientId, datecode )
         return await tasks

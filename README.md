@@ -1,4 +1,5 @@
-# TTFH 2.0
+# TTH 2.0
+## Tasks Timer for Humans
 
 Simple offline application to control the time and cost of all your customer's tasks. Exports to CVS and detailed monthly PDF reports with custom header. Local IndexDB database, JSON import - export.
 
@@ -11,9 +12,9 @@ Simple offline application to control the time and cost of all your customer's t
 * On-the-fly recalculation of the cost of all time fragments for all tasks and clients, based on the cost per task hour and/or Client. 
 * CSV export
 * Detailed PDF export with custom header.
-* Export of the entire database in JSON.
-* Import of the entire database into JSON.
-* Removal of the database.
+* Export database in JSON.
+* Import database in JSON.
+* Removal database.
 
  
 ## Project setup

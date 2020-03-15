@@ -1,5 +1,20 @@
 # TTFH 2.0
 
+Simple offline application to control the time and cost of all your customer's tasks. Exports to CVS and detailed monthly PDF reports with custom header. Local IndexDB database, JSON import - export.
+
+ [Vue](https://github.com/vuejs/vue)
+
+[Vuex](https://github.com/vuejs/vuex)
+
+[Moment](https://github.com/moment/moment)
+
+[Dexie](https://github.com/dfahlander/Dexie.js)
+
+[EasyTimer](https://github.com/albert-gonzalez/easytimer.js)
+
+[jsPDF](https://github.com/MrRio/jsPDF)
+
+
 ## Project setup
 ```
 yarn install

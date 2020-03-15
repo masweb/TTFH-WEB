@@ -1,5 +1,6 @@
 {
   "name": "TTFH",
+  "Description": "Simple offline application to control the time and cost of all your customers' tasks. Exports to CVS and detailed monthly PDF reports with custom header. Local IndexDB database, JSON import - export",
   "version": "2.0.0",
   "license": "MIT",
   "scripts": {
@@ -11,7 +12,6 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.12.1",
-    "axios": "^0.19.2",
     "core-js": "^3.6.4",
     "dexie": "^2.0.4",
     "easytimer": "^1.1.1",

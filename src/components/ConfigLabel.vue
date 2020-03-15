@@ -31,7 +31,6 @@
                 localStorage.setItem('line2', this.line2 )
                 localStorage.setItem('line3', this.line3 )
                 this.$notify({ group: 'app', type: 'success',  text: 'Datos guardados' })
-
             }
         }
     })
@@ -56,10 +55,7 @@
                     <br>
                     <div @click="savelines" class="btn expimp">Guardar</div>
                 </div>
-                <div class="column">
-<!--                    coco-->
-                </div>
-
+                <div class="column"></div>
             </div>
         </div>
 

@@ -92,10 +92,10 @@ export default new Vuex.Store({
           let m: string = state.currentmonth.toString()
           m = ('0' + m).slice(-2)
           const datecode =   m + y
-          const cli = new app.Task;
+          const cli = new app.Task
           const tasks = await cli.allTasksFromClient(clientId, datecode);
           state.tasks = tasks
-          const det = new app.TimeDetail;
+          const det = new app.TimeDetail
           for (let x = 0; x < tasks.length; x++)
               tasks[x].detail = await det.allDetailsFromTask( tasks[x].id , state.datecode )
 

@@ -1,5 +1,5 @@
 {
-  "name": "TTFH",
+  "name": "TTH",
   "Description": "Simple offline application to control the time and cost of all your customers' tasks. Exports to CVS and detailed monthly PDF reports with custom header. Local IndexDB database, JSON import - export",
   "version": "2.0.0",
   "license": "MIT",
@@ -22,7 +22,7 @@
     "vue-js-modal": "^1.3.33",
     "vue-js-toggle-button": "^1.3.3",
     "vue-notification": "^1.3.20",
-    "vuex": "^3.1.2"
+    "vuex": "^3.1.3"
   },
   "devDependencies": {
     "@types/jest": "^24.0.19",

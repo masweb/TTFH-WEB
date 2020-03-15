@@ -1,5 +1,5 @@
 <script lang="ts">
-    import {mapState} from "vuex";
+    import { mapState } from "vuex";
     import app from './../application'
     const tsk = new app.Task
 

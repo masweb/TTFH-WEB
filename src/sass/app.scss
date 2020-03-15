@@ -196,6 +196,7 @@ h1 {
 
         .name {
           padding-left: 6px;
+          cursor: pointer;
         }
 
         .amounttak {
@@ -413,6 +414,26 @@ h1 {
 
 }
 
+
+
+input.inpuntnametask {
+  width: calc(350%  );
+  height: 24px;
+  color: #ddd;
+  font-size: 16px;
+  padding: 4px;
+  padding-left: 12px;
+  letter-spacing: .025em;
+}
+
+
+
+
+
+
+
+
+
 .vue-dialog-button {
   font-size: inherit!important;
 }
@@ -422,6 +443,12 @@ h1 {
 .vue-dialog .vue-dialog-buttons {
   border-top: 0px solid #eee!important;
 }
+
+
+
+
+
+
 //grid -----------------
 .container {
   margin: 0 auto;

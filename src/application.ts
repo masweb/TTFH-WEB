@@ -100,6 +100,12 @@ class Task {
         return await 'ok'
     }
 
+    async changeTaskName(taskId: number, task: string) {
+        const conn = await new repo.Task
+        await conn.changeTaskName( taskId, task  )
+        return await 'ok'
+    }
+
 }
 
 

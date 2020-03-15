@@ -107,6 +107,11 @@ class Task extends DataBase {
         return await 'ok'
     }
 
+    async changeTaskName(taskId: number, task: string) {
+        await this.tasks.where({id: taskId}).modify({ task: task })
+        return await 'ok'
+    }
+
 }
 
 class TimeDetail extends DataBase {

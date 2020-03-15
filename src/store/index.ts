@@ -78,9 +78,7 @@ export default new Vuex.Store({
 
        setToggleHistory(state, params) {
            state.tasks.find((t, i) => {
-               if (t.id ===  params.taskId ) {
-                   state.tasks[i].openHistory = params.state
-               }
+               if (t.id ===  params.taskId ) state.tasks[i].openHistory = params.state
            })
         },
 
@@ -141,6 +139,22 @@ export default new Vuex.Store({
            })
            this.commit('calcTime')
        },
+
+
+       changeTaskName(state, params) {
+           state.tasks.find((t, i) => {
+               if (t.id === params.taskId) {
+                   state.tasks[i].task =  params.task
+               }
+           })
+           this.commit('setCurrentCustomer', state.activecustomer )
+       },
+
+
+
+
+
+
 
        calcTime(state ) {
            let totaltask = 0.0

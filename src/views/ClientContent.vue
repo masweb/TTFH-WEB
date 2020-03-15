@@ -11,6 +11,7 @@
     import Totalsup from '../components/Totalsup.vue'
     import HourlyTask from '../components/HourlyTask.vue'
     import Tasktimer from '../components/Tasktimer.vue'
+    import EditTaskName from '../components/EditTaskname.vue'
     import Note from '../components/Note.vue'
     import DownloadPDF from '../components/DownloadPDF.vue'
     import DownloadCSV from '../components/DownloadCSV.vue'
@@ -22,6 +23,7 @@
             Totalsup,
             HourlyTask,
             Tasktimer,
+            EditTaskName,
             Note,
             DownloadPDF,
             DownloadCSV
@@ -161,7 +163,8 @@
             <div class="task" v-bind:class="{ active: task.running }">
                 <div @click="playnewtask(task.id)" v-show="!task.running" class="player btn" v-if="checkactualmonth(task.datecode)" ><i class="fas fa-play"></i></div>
                 <div @click="stoptask(task.id)" class="player btn" v-show="task.running" v-bind:class="{ active: !task.running }"><i class="fas fa-pause"></i></div>
-                <div class="name">{{task.task}}</div>
+<!--                <div class="name">{{task.task}}</div>-->
+                <EditTaskName :taskId="task.id" :task="task.task"/>
 
                 <div class="push">
                     <totalsup :taskId="task.id"  v-if="task.running"/>

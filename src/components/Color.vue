@@ -268,7 +268,14 @@
             background-color: var(--hgris)!important;;
         }
     }
-
+    input.inpuntnametask {
+        background-color: var(--fondo);
+        border: 1px solid var(--gris);
+        border-left: 0px solid var(--gris);
+        border-top: 0px solid var(--gris);
+        border-right: 0px solid var(--gris);
+        color: var(--texto)!important;
+    }
 </style>
 
 

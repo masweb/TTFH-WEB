@@ -38,7 +38,7 @@
 <template>
     <div id="newcustomer" class="hello">
         <div class="inputgroup">
-            <div class="labelinput">+ cliente:</div>
+            <div class="labelinput">+ {{$t('Client')}}:</div>
             <input v-model="name" type="text"  v-on:keyup.enter="newcustomer"  class="inpuntnewtask name" ref="inpuntnewtask">
         </div>
         <div class="inputgroup">

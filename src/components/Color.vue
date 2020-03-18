@@ -292,6 +292,16 @@
         border-right: 0px solid var(--gris);
         color: var(--texto)!important;
     }
+
+    .select-css {
+        background-color: var(--fondo);
+        border: 1px solid var(--gris);
+        color: var(--texto);
+        &:focus {
+            color: var(--texto);
+
+        }
+    }
 </style>
 
 

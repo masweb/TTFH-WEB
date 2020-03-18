@@ -1,3 +1,42 @@
 {
-  "message": "hello i18n !!"
+  "Save": "Guarar",
+  "Close": "Cerrar",
+  "Ok": "Aceptar",
+  "Client": "Cliente",
+  "New task": "Nueva tarea",
+  "Delete Client": "Eliminar Cliente",
+
+  "day": "día",
+  "days": "días",
+
+  "January": "enero",
+  "February": "febrero",
+  "March": "marzo",
+  "April": "abril",
+  "May": "mayo",
+  "June": "junio",
+  "July": "julio",
+  "August": "agosto",
+  "September": "septiembre",
+  "October": "octubre",
+  "November": "noviembre",
+  "December": "diciembre",
+
+  "PDF Header": "Cabecera PDF",
+  "Line": "Linea",
+  "Language": "Idioma",
+  "Currencie": "Moneda",
+  "Theme": "Tema",
+  "Dark": "Oscuro",
+  "Light": "Claro",
+  "Import / Export / Delete DB": "Importar / Exportar / Borrar DB",
+  "To import or...": "Para importar o exportar es necesario que todas las tareas estén paradas.",
+  "Import": "Importar",
+  "Export": "Exportar",
+  "Delete": "Eliminar",
+  "Maximum": "Máximo",
+  "Do you import ?": "¿ Quiere importar el contenido de la exportación ?, los datos actuales de la aplicación serán sustituidos por estos, si no los has exportado, se perderán para siempre.",
+  "Do you delete ?": "¿ Quiere borrar toda la base de datos ?, si no ha exportado los datos, estos se perderán para siempre."
+
+
 }

@@ -24,7 +24,7 @@
         },
 
         computed: {
-            ...mapState(['tasks', 'activecustomer']),
+            ...mapState(['tasks', 'activecustomer', 'currencie']),
         },
 
         watch: {
@@ -87,7 +87,7 @@
             <span v-show="istaskprice">
                 <i class="fas fa-lock-open"></i>
             </span>
-            {{newhourly}} €/h.
+            {{newhourly}} {{currencie}}/h.
         </span>
 
         <span v-show="showedit" class="ratechanger" >
@@ -100,7 +100,7 @@
                 </span>
             </span>
             <input v-model="newhourly" v-on:keyup.enter="settaskhourly"  type="number"  ref="hourlychangerinput">
-€/h.
+{{currencie}}/h.
         </span>
 
     </div>

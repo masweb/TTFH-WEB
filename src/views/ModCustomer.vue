@@ -16,7 +16,7 @@
         },
 
         computed: {
-            ...mapState(['client']),
+            ...mapState(['client', 'currencie']),
 
         },
 
@@ -72,17 +72,17 @@
         <v-dialog/>
 
         <div class="inputgroup">
-            <div class="labelinput">cliente:</div>
+            <div class="labelinput">{{$t('Client')}}:</div>
             <input v-model="customertext" type="text" v-on:keyup.enter="modcustomer" class="inpuntnewtask" ref="inpuntnewtask">
         </div>
 
         <div class="inputgroup">
-            <div class="labelinput">€/h:</div>
+            <div class="labelinput">{{currencie}}/h:</div>
             <input v-model="customerhourlyrate" v-on:keyup.enter="modcustomer" type="number" class="inpuntnewtask">
         </div>
 
 
-        <div @click="deleteclient" class="btne">Borrar Cliente</div>
+        <div @click="deleteclient" class="btne">{{$t('Delete Client')}}</div>
         <div class="error">{{error}}</div>
 
     </div>

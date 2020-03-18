@@ -23,14 +23,15 @@
             <div class="row">
                 <div class="col-6">
                     <ul>
-                        <li>Idiomas: Castellano, Inglés</li>
+                        <li>Idiomas: Castellano, Inglés.</li>
+                        <li>Monedas: €, &, $, ¥, Kr, Fr, ₩.</li>
                         <li>Exportación detallada de PDF con encabezado personalizado.</li>
                         <li>Exportación CSV.</li>
                         <li>Tema claro u oscuro.</li>
                         <li>Cliente: crear, modificar y borrar, nombre y coste por hora.</li>
                         <li>Tarea: crear, modificar y borrar, nombre y coste por hora.</li>
                         <li>Comentario por tarea: crear, modificar y borrar, texto.</li>
-                    </ul>
+                     </ul>
                 </div>
                 <div class="col-6">
                     <ul>

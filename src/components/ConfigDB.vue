@@ -20,15 +20,24 @@
 
             answerdelete() {
                 this.$modal.show('dialog', {
-                    title: 'Borrar',
-                    text:  '¿ Quiere borrar toda la base de datos ?, si no ha exportado los datos, estos se perderán para siempre.' ,
+                    title: this.$t('Delete'),
+                    text:  this.$t('Do you delete ?'),
                     buttons: [
-                        { title: 'Cerrar' },
-                        { title: 'Aceptar', handler: () => { this.deleteaction() } }
+                        { title:  this.$t('Close') },
+                        { title:  this.$t('Ok'), handler: () => { this.deleteaction() } }
                     ]
                 })
             },
-
+            answerload() {
+                this.$modal.show('dialog', {
+                    title: this.$t('Import'),
+                    text:  this.$t('Do you import ?'),
+                    buttons: [
+                        { title:  this.$t('Close') },
+                        { title:  this.$t('Ok'), handler: () => { this.loadDBdata() } }
+                    ]
+                })
+            },
             onFileChange() {
                 const file = this.$refs.uploader.files[0]
                 console.log('file', file)
@@ -84,16 +93,7 @@
                 await location.reload()
             },
 
-            answerload() {
-                 this.$modal.show('dialog', {
-                    title: 'Importar',
-                    text:  '¿ Quiere importar el contenido de la exportación ?, los datos actuales de la aplicación serán sustituidos por estos, si no los has exportado, se perderán para siempre.' ,
-                    buttons: [
-                        { title: 'Cerrar' },
-                        { title: 'Aceptar', handler: () => { this.loadDBdata() } }
-                    ]
-                })
-            },
+
 
             async deleteaction() {
                 await cli.clear()
@@ -122,11 +122,11 @@
 <template>
     <div id="configdb">
         <v-dialog/>
-        <h1>Importar / Exportar / Borrar DB</h1>
-        <div style="margin-bottom: 20px">Para importar o exportar es necesario que todas las tareas estén paradas.</div>
-        <span @click="importar" class="btn expimp">Importar</span>
-        <span @click="exportar" class="btn expimp">Exportar</span>
-        <span @click="answerdelete" class="btn expimp">Borrar</span>
+        <h1>{{$t('Import / Export / Delete DB')}}</h1>
+        <div style="margin-bottom: 20px">{{$t('To import or...')}}</div>
+        <span @click="importar" class="btn expimp">{{$t('Import')}}</span>
+        <span @click="exportar" class="btn expimp">{{$t('Export')}}</span>
+        <span @click="answerdelete" class="btn expimp">{{$t('Delete')}}</span>
         <input type="file" @change="onFileChange"  id="selectFile"  style="opacity: .0" ref="uploader">
     </div>
 

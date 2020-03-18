@@ -1,3 +1,43 @@
 {
-  "message": "hello i18n !!"
+  "Save": "Save",
+  "Close": "Close",
+  "Ok": "Ok",
+  "Client": "Client",
+  "New task": "New task",
+  "Delete Client": "Delete Client",
+
+  "day": "day",
+  "days": "days",
+
+  "January": "January",
+  "February": "February",
+  "March": "March",
+  "April": "April",
+  "May": "May",
+  "June": "June",
+  "July": "July",
+  "August": "August",
+  "September": "September",
+  "October": "October",
+  "November": "November",
+  "December": "December",
+
+  "PDF Header": "PDF Header",
+  "Line": "Line",
+  "Language": "Language",
+  "Currencie": "Currencie",
+  "Theme": "Theme",
+  "Dark": "Dark",
+  "Light": "Light",
+  "Import / Export / Delete DB": "Import / Export / Delete DB",
+  "To import or...": "To import or export, all tasks must be stopped.",
+  "Import": "Import",
+  "Export": "Export",
+  "Delete": "Delete",
+  "Maximum": "Maximum",
+  "Do you import ?": "Do you want to import the content of the export, the current data of the application will be replaced by these, if you have not exported them, they will be lost forever.",
+  "Do you delete ?": "Do you want to delete the entire database? If you have not exported the data, it will be lost forever."
+
+
+
 }

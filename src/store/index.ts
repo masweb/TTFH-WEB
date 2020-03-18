@@ -32,18 +32,18 @@ export default new Vuex.Store({
           {id: 32, name: '2032' },
       ],
       months: [
-          {id: 1, name: 'enero'},
-          {id: 2, name: 'febrero'},
-          {id: 3, name: 'marzo'},
-          {id: 4, name: 'abril'},
-          {id: 5, name: 'mayo'},
-          {id: 6, name: 'junio'},
-          {id: 7, name: 'julio'},
-          {id: 8, name: 'agosto'},
-          {id: 9, name: 'septiembre'},
-          {id: 10, name: 'octubre'},
-          {id: 11, name: 'noviembre'},
-          {id: 12, name: 'diciembre'},
+          {id: 1, name: 'January'},
+          {id: 2, name: 'February'},
+          {id: 3, name: 'March'},
+          {id: 4, name: 'April'},
+          {id: 5, name: 'May'},
+          {id: 6, name: 'June'},
+          {id: 7, name: 'July'},
+          {id: 8, name: 'August'},
+          {id: 9, name: 'September'},
+          {id: 10, name: 'October'},
+          {id: 11, name: 'November'},
+          {id: 12, name: 'December'},
       ],
       currentyear: 0,
       currentmonth: 0,
@@ -51,6 +51,10 @@ export default new Vuex.Store({
       activecustomer: 0,
       runningtasks: 0,
       hourlyRate: 0,
+      lang: '',
+      langs: ['es', 'en'],
+      currencie: '',
+      currencies: [ '€', '£', '$', '¥', 'Kr', 'Fr', '₩', '₸', '₮', '₴', '฿', '₽', '₱', 'R$']
    },
 
 
@@ -62,6 +66,8 @@ export default new Vuex.Store({
           state.currentmonth = parseInt(moment().format('MM'))
           state.currentyear = parseInt(moment().format('YY'))
           state.datecode = moment().format('MM') + moment().format('YY')
+
+          state.currencie = localStorage.getItem('ttcurrencie')
       },
 
       setView(state, view) {
@@ -71,6 +77,10 @@ export default new Vuex.Store({
       setTheme(state, theme) {
           state.theme = theme
       },
+
+       setCurencie(state, currencie) {
+           state.currencie = currencie
+       },
 
        pushNewTask(state, task) {
            state.tasks.unshift(task)

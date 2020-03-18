@@ -25,7 +25,7 @@
         },
 
         computed: {
-            ...mapState([ 'tasks', 'hourlyRate' ])
+            ...mapState([ 'tasks', 'hourlyRate', 'currencie' ])
         },
 
         mounted() {
@@ -75,13 +75,13 @@
         <span class="fin"></span>
         <i class="fas fa-cog fa-spin" style="margin-right:4px"></i>
         <span v-if="days>0"> {{days}}
-                <span v-if="days>1">días</span>
-                <span v-else>día</span>
+                <span v-if="days>1">{{$t('days')}}</span>
+                <span v-else>{{$t('day')}}</span>
         </span>
         <span class="timer">{{time}}</span>
 
-        <span class="hourlyt">€/h:&nbsp;{{hourly}}</span>
-        <span class="amount">  {{amount}} € </span>
+        <span class="hourlyt">{{currencie}}/h:&nbsp;{{hourly}}</span>
+        <span class="amount"> {{amount}} {{currencie}} </span>
     </div>
 </template>
 

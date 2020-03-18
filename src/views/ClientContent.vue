@@ -37,7 +37,7 @@
             }
         },
         computed: {
-            ...mapState(['activecustomer', 'tasks', 'client', 'runningtasks', 'force']),
+            ...mapState(['activecustomer', 'tasks', 'client', 'runningtasks', 'force', 'currencie']),
         },
 
 
@@ -146,17 +146,17 @@
     <div id="clientcontent">
         <v-dialog/>
         <div class="bar">
-            <span @click="tomodifycustomer" class="marginado link">Cliente: <span class="bold">{{client.name}}</span></span>
-            <span class="marginado">€/h: <span class="bold">{{client.hourlyRate}}</span></span>
+            <span @click="tomodifycustomer" class="marginado link">{{$t('Client')}}: <span class="bold">{{client.name}}</span></span>
+            <span class="marginado">{{currencie}}/h: <span class="bold">{{client.hourlyRate}}</span></span>
             <time-nav class="push" />
-            <span class="marginado bold"> {{format(client.revenue)}} € </span>
+            <span class="marginado bold"> {{format(client.revenue)}} {{currencie}} </span>
 
             <DownloadPDF v-if="!runningtasks"/>
             <DownloadCSV  v-if="!runningtasks"/>
         </div>
 
         <div class="inputgroup">
-            <div class="labelinput">Nueva tarea:</div>
+            <div class="labelinput">{{$t('New task')}}:</div>
             <input v-model="newtasktext" v-on:keyup.enter="newtask" type="text" class="inpuntnewtask" ref="inpuntnewtask">
         </div>
 
@@ -171,7 +171,7 @@
                 <div class="push">
                     <totalsup :taskId="task.id"  v-if="task.running"/>
                     <span v-else v-show="task.revenue>0">
-                        <span class="totaltasktimer">{{task.totalduration}} • {{task.revenue}}  € </span>
+                        <span class="totaltasktimer">{{task.totalduration}} • {{task.revenue}} {{currencie}} </span>
                     </span>
                 </div>
 
@@ -203,10 +203,10 @@
                     <div v-else>
                         <span class="fin"> <i class="fas fa-stop-circle"></i> {{ moment(deta.end).format('H:mm:ss') }} </span>
                         <span class="duracion"> <i class="fas fa-clock"></i> {{ difduration(deta.start, deta.end) }} </span>
-                        <span class="hourly" v-if="task.hourlyRate==0"> €/h: {{ client.hourlyRate }}</span>
-                        <span class="hourly" v-if="task.hourlyRate!=0"> €/h: {{ task.hourlyRate }}</span>
-                        <span class="amount" v-if="task.hourlyRate==0">{{ amount(deta.start, deta.end, client.hourlyRate ) }} € </span>
-                        <span class="amount" v-if="task.hourlyRate!=0">{{ amount(deta.start, deta.end, task.hourlyRate ) }} € </span>
+                        <span class="hourly" v-if="task.hourlyRate==0"> {{currencie}}/h: {{ client.hourlyRate }}</span>
+                        <span class="hourly" v-if="task.hourlyRate!=0"> {{currencie}}/h: {{ task.hourlyRate }}</span>
+                        <span class="amount" v-if="task.hourlyRate==0">{{ amount(deta.start, deta.end, client.hourlyRate ) }} {{currencie}} </span>
+                        <span class="amount" v-if="task.hourlyRate!=0">{{ amount(deta.start, deta.end, task.hourlyRate ) }} {{currencie}} </span>
                     </div>
                     <span @click="deletedetail(deta.id)" v-if="runningtasks==0" class="push btn deletedetail"> <i class="fas fa-times-circle"></i> </span>
                 </div>
@@ -214,7 +214,7 @@
                     <span class="totlaltime"  >
                            <span class="totaltasktimer"><i class="fas fa-clock"  style="margin-right:4px"></i>{{ task.totalduration }}</span>
                     </span>
-                    <span class="totlarevenue"  v-if="!task.running"> {{ task.revenue }} € </span>
+                    <span class="totlarevenue"  v-if="!task.running"> {{ task.revenue }} {{currencie}} </span>
                 </div>
             </div>
 

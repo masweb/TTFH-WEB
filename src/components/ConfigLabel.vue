@@ -44,16 +44,16 @@
         <div class="container">
             <div class="row">
                 <div class="column" style="padding-right: 50px">
-                    <h1>Cabecera PDF</h1>
-                    <div class="label">Línea 1</div>
+                    <h1>{{$t('PDF Header')}}</h1>
+                    <div class="label">{{$t('Line')}} 1</div>
                     <input v-model="line1" type="text" class="configinput">
-                    <div class="label">Línea 2</div>
+                    <div class="label">{{$t('Line')}} 2</div>
                     <input v-model="line2"  type="text" class="configinput">
-                    <div class="label">Línea 3</div>
+                    <div class="label">{{$t('Line')}} 3</div>
                     <input v-model="line3"  type="text" class="configinput">
                     <br>
                     <br>
-                    <div @click="savelines" class="btn expimp">Guardar</div>
+                    <div @click="savelines" class="btn expimp">{{$t('Save')}}</div>
                 </div>
                 <div class="column"></div>
             </div>

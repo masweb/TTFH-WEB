@@ -26,11 +26,23 @@
          },
 
         mounted(): void {
+            const checklang = localStorage.getItem('tthlang')
+            if (checklang != null) {
+               this.$i18n.locale = localStorage.getItem('tthlang')
+            }
+            const checkcurr = localStorage.getItem('tthlang')
+            if (checkcurr != null) {
+                this.$i18n.locale = localStorage.getItem('ttcurrencie')
+                this.$store.commit('setCurencie', localStorage.getItem('ttcurrencie'))
+            } else {
+                this.$store.commit('setCurencie', '€')
+
+            }
             this.$store.commit('setClients')
         },
 
         computed: {
-            ...mapState(['currentview', 'clients', 'activecustomer']),
+            ...mapState(['currentview', 'clients', 'activecustomer', 'lang']),
         },
         methods: {
             setcustomer(id: number) {

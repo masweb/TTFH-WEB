@@ -40,12 +40,12 @@
 
             getmonth(month) {
                 const found = this.months.find(m => m.id === parseInt(month));
-                return found.name;
-            },
+                return this.$t(found.name)
+    },
 
             getyear(year) {
-                const found = this.years.find(y => y.id === parseInt(year));
-                return found.name;
+                const found = this.years.find(y => y.id === parseInt(year))
+                return found.name
             },
 
             nextmonth() {

@@ -25,7 +25,7 @@
         },
 
         mounted() {
-            this.textnote = this.$t('message')
+            this.textnote = this.note
         },
 
         methods: {
@@ -49,7 +49,7 @@
 <template>
     <div id="note">
         <textarea v-model="textnote" v-on:keyup="chelength"></textarea>
-        <span @click="savenote" v-if="showsave" class="btne push">Guardar</span>
-        <span  v-if="!showsave" style="margin-left: 20px" >Máximo 255</span>
+        <span @click="savenote" v-if="showsave" class="btne push">{{$t('Save')}}</span>
+        <span  v-if="!showsave" style="margin-left: 20px" >{{$t('Maximum')}} 255</span>
     </div>
 </template>

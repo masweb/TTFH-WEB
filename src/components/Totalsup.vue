@@ -28,7 +28,7 @@
         },
 
         computed: {
-            ...mapState(['hourlyRate', "datecode"]),
+            ...mapState(['hourlyRate', "datecode", "currencie"]),
         },
 
         methods: {
@@ -90,7 +90,7 @@
 
         <i class="fas fa-cog fa-spin" style="margin-right:4px"></i>
         <span class="ttimer">{{time}}</span>   •
-        <span class="totlarevenue">{{amount}} <span style="margin-right: 10px">€ </span></span>
+        <span class="totlarevenue">{{amount}} <span style="margin-right: 10px">{{currencie}} </span></span>
 
       </div>
 </template>

@@ -13,7 +13,7 @@ export default new Vuex.Store({
           revenue: 0,
           hourlyRate: 0
       },
-      currentview: 'config',
+      currentview: 'home',
       clients: new Array<Iclient>(),
       theme: null,
       years: [

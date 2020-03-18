@@ -1,8 +1,11 @@
 // https://docs.cypress.io/api/introduction/api.html
 
-describe('My First Test', () => {
+describe('Create Client Foo', () => {
   it('Visits the app root url', () => {
-    cy.visit('/')
-    cy.contains('h1', 'Welcome to Your Vue.js + TypeScript App')
+      cy.visit('http://localhost:8080/')
+      cy.get('.btn.newclient').click()
+      cy.get('input.inpuntnewtask.name').type('Foo')
+      cy.get('input.inpuntnewtask.amount').clear().type('23').type('{enter}');
+      cy.get('.navitem.btn').first().click()
   })
 })

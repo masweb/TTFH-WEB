@@ -26,12 +26,10 @@
                      return
                  }
                  const cli = new app.Client
-                 await cli.create(this.name, this.hourlyRate)
+                 const nc = await cli.create(this.name, this.hourlyRate)
                  await this.$store.commit('setClients')
-                 await this.$store.commit('setView', 'config' )
+                 await this.$store.commit('setCurrentCustomer', nc )
              },
-
-
         },
     });
 </script>
@@ -41,11 +39,11 @@
     <div id="newcustomer" class="hello">
         <div class="inputgroup">
             <div class="labelinput">+ cliente:</div>
-            <input v-model="name" type="text"  v-on:keyup.enter="newcustomer"  class="inpuntnewtask" ref="inpuntnewtask">
+            <input v-model="name" type="text"  v-on:keyup.enter="newcustomer"  class="inpuntnewtask name" ref="inpuntnewtask">
         </div>
         <div class="inputgroup">
             <div class="labelinput">€/h:</div>
-            <input v-model.number="hourlyRate" v-on:keyup.enter="newcustomer" type="number" step=".1" class="inpuntnewtask"  >
+            <input v-model.number="hourlyRate" v-on:keyup.enter="newcustomer" type="number" step=".1" class="inpuntnewtask amount"  >
         </div>
        <div class="error">{{error}}</div>
 

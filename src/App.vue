@@ -1,9 +1,10 @@
 <script lang="ts">
 
     import Vue from 'vue';
-    import {mapState} from "vuex"
+    import { mapState } from "vuex"
 
     import ClientContent from './views/ClientContent.vue'
+    import Home from './views/Home.vue'
     import Config from './views/Config.vue'
     import NewCustomer from './views/NewCustomer.vue'
     import ModCustomer from './views/ModCustomer.vue'
@@ -16,6 +17,7 @@
         name: 'App',
         components: {
             ClientContent,
+            Home,
             Config,
             TooBar,
             NewCustomer,
@@ -57,7 +59,3 @@
         </div>
     </div>
 </template>
-
-<style lang="scss">
-
-</style>

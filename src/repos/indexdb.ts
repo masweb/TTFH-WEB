@@ -39,7 +39,8 @@ class Client extends DataBase {
      }
 
     async create(newclient: Iclient) {
-        await this.clients.add(newclient)
+        const nc = await this.clients.add(newclient)
+        return nc
     }
 
     async modClient(clientId: number, name: string, hourlyRate: number) {
@@ -83,7 +84,7 @@ class Task extends DataBase {
 
     async toggleHistory(id: number) {
         const task = await this.tasks.where({id: id}).first()
-        const res = await this.tasks.where({id: id}).modify({openHistory: !task.openHistory})
+        await this.tasks.where({id: id}).modify({openHistory: !task.openHistory})
         return await  !task.openHistory
      }
 

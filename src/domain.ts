@@ -52,7 +52,7 @@ class Task {
         this.note = '';
         this.openHistory = false;
         this.opencoment = false;
-        this.datecode =  moment().format('MMYY');
+        this.datecode =  moment().format('MMYY')
         this.detail = [];
         this.totalduration = '';
         this.revenue = 0;
@@ -65,17 +65,12 @@ class TimeDetail {
     taskId: number;
     start: string;
     end: string;
-    hourlyRate: number;
-    revenue: number;
     datecode: string;
     constructor( taskId: number) {
         this.taskId = taskId;
         this.end = '';
-        this.start = moment().format('YYYY-MM-DD HH:mm:ss');
-        this.hourlyRate = 0;
-        this.revenue = 0;
+        this.start = moment().format('YYYY-MM-DD HH:mm:ss')
         this.datecode =  moment().format('MMYY');
-
     }
 }
 

@@ -25,7 +25,7 @@
         },
 
         mounted() {
-            this.textnote = this.note
+            this.textnote = this.$t('message')
         },
 
         methods: {

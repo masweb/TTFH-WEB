@@ -7,7 +7,7 @@ class Client {
     async all() {
         const conn = new repo.Client
         const clients = await conn.all()
-        return clients
+        return await clients
     }
     async clear() {
         const conn = new repo.Client
@@ -23,7 +23,8 @@ class Client {
     async create(name: string, hourlyRate: number) {
         const newcliewnt =  new domain.Client( name, hourlyRate )
         const conn = new repo.Client
-        await conn.create( newcliewnt )
+        const nc = await conn.create( newcliewnt )
+        return nc
      }
 
     async modClient(clientId: number, name: string, hourlyRate: number) {
@@ -153,7 +154,7 @@ class TimeDetail {
 
     async deleteDetailsFromTask( taskId: number) {
         const conn = new repo.TimeDetail
-        const details = await conn.deleteDetailsFromTask( taskId  )
+        await conn.deleteDetailsFromTask( taskId  )
         return await 'ok'
     }
 

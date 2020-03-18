@@ -134,7 +134,9 @@
             tomodifycustomer() {
                 this.$store.commit('setView', 'mod-customer')
             },
-
+            format(x) {
+                return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ".");
+            }
         }
     });
 </script>
@@ -147,7 +149,7 @@
             <span @click="tomodifycustomer" class="marginado link">Cliente: <span class="bold">{{client.name}}</span></span>
             <span class="marginado">€/h: <span class="bold">{{client.hourlyRate}}</span></span>
             <time-nav class="push" />
-            <span class="marginado bold"> {{client.revenue}} € </span>
+            <span class="marginado bold"> {{format(client.revenue)}} € </span>
 
             <DownloadPDF v-if="!runningtasks"/>
             <DownloadCSV  v-if="!runningtasks"/>

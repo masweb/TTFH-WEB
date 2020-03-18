@@ -21,7 +21,7 @@ export interface Itasks {
     datecode: string;
     totalduration: string;
     revenue: number;
-    detail: Array<Itimedetail>
+    detail: Array<Itimedetail>;
 }
 
 export interface Itimedetail {
@@ -29,8 +29,6 @@ export interface Itimedetail {
     taskId: number;
     start: string;
     end: string;
-    hourlyRate: number;
-    revenue: number;
     datecode: string;
 }
 

@@ -13,11 +13,11 @@
 
 <template>
     <div id="toolbar" class="toolbar">
-        <span @click="$store.commit('setView', 'new-customer' )" class="new btn">
+        <span @click="$store.commit('setView', 'new-customer' )" class="btn newclient">
             <i class="fas fa-plus" ></i>
         </span>
 
-        <span @click="$store.commit('setView', 'config' )"  class="new btn">
+        <span @click="$store.commit('setView', 'config' )"  class="btn conf">
             <i class="fas fa-cog"></i>
         </span>
 

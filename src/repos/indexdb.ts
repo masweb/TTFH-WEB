@@ -25,7 +25,7 @@ class DataBase extends Dexie {
 class Client extends DataBase {
 
     async all() {
-        const clients = await this.clients.toArray();
+        const clients = await this.clients.toArray()
         return clients.reverse();
     }
 
@@ -46,7 +46,18 @@ class Client extends DataBase {
     async modClient(clientId: number, name: string, hourlyRate: number) {
         this.clients.where({id: clientId}).modify({name: name })
         this.clients.where({id: clientId}).modify({hourlyRate: hourlyRate })
-        return await  'ok'
+        return await 'ok'
+    }
+
+    async deleteClient(clientId: number) {
+        const tasks = await this.tasks.where({clientId: clientId}).toArray()
+        await console.log('tasks', tasks)
+        for ( let i = 0; i < tasks.length; i++ ) {
+            await this.timedetail.where({ taskId: tasks[i].id }).delete()
+        }
+        await  this.tasks.where({clientId: clientId}).delete()
+        await this.clients.where({id: clientId}).delete()
+        return await 'ok'
     }
 
 

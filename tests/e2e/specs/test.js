@@ -15,7 +15,7 @@ describe('Create Play and Stop Bar', () => {
         cy.get('.navitem.btn').first().click()
         cy.get('input.inpuntnewtask').type('Bar').type('{enter}')
         cy.get('.player.btn').first().click()
-        cy.wait(2000)
+        cy.wait(3000)
         cy.get('.player.btn.stop').first().click()
     })
 })

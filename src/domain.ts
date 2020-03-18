@@ -1,16 +1,4 @@
-
 import moment from 'moment';
-
-class User {
-    name: string;
-    surname: string;
-    email: string;
-    constructor( name: string, surname: string, email: string   ) {
-        this.name = name;
-        this.surname = surname;
-        this.email = email;
-     }
-}
 
 class Client {
     id?: number;
@@ -57,7 +45,6 @@ class Task {
         this.totalduration = '';
         this.revenue = 0;
     }
-
 }
 
 class TimeDetail {
@@ -74,4 +61,4 @@ class TimeDetail {
     }
 }
 
-export default {  User, Client, Task, TimeDetail }
+export default { Client, Task, TimeDetail }

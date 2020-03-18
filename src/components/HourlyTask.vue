@@ -8,7 +8,7 @@
 
         data() {
             return {
-                newhourly: null,
+                newhourly: 0,
                 showedit: false,
                 istaskprice: null,
             }

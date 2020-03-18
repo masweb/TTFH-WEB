@@ -222,6 +222,22 @@
             }
         }
     }
+
+        #modcustomer {
+
+        .btne {
+            border-bottom: 1px solid var(--gris)!important;
+
+            &:hover { background-color: var(--hgris) }
+            &.active {
+                background-color: var(--hgrisb);
+                color: var(--texto);
+            }
+        }
+    }
+
+
+
     textarea:focus, input:focus{
         outline: none;
     }

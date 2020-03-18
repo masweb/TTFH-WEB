@@ -10,7 +10,7 @@
         data() {
             return {
                 customertext: null,
-                customerhourlyrate: null,
+                customerhourlyrate: 0,
                 error: null,
             }
         },
@@ -36,10 +36,31 @@
                     this.error = 'Euros por hora necesario '
                     return
                 }
-                  await cli.modClient(this.client.id, this.customertext,  this.customerhourlyrate )
-                  await this.$store.commit('setModCustomer', {  name:  this.customertext, hourlyRate:  this.customerhourlyrate } )
+                  await cli.modClient(this.client.id, this.customertext,  parseInt(this.customerhourlyrate) )
+                  await this.$store.commit('setModCustomer', {  name:  this.customertext, hourlyRate: parseInt( this.customerhourlyrate ) } )
                   await this.$store.commit('setCurrentCustomer',  this.client.id )
+            },
+
+            async deleteclient() {
+                this.$modal.show('dialog', {
+                    title: 'Eliminar Cliente',
+                    text:  '¿ Quiere eliminar este Cliente y todos sus datos ?' ,
+                    buttons: [
+                        { title: 'Cerrar' },
+                        { title: 'Aceptar', handler: () => { this.actiondeleteclient() } }
+                    ]
+                })
+
+
+            },
+
+            async actiondeleteclient() {
+                await cli.deleteClient(this.client.id)
+                await this.$store.commit('setView', 'home')
+                await this.$store.commit('setClients')
+
             }
+
         },
 
     }
@@ -48,6 +69,7 @@
 
 <template>
     <div id="modcustomer" class="hello">
+        <v-dialog/>
 
         <div class="inputgroup">
             <div class="labelinput">cliente:</div>
@@ -59,6 +81,8 @@
             <input v-model="customerhourlyrate" v-on:keyup.enter="modcustomer" type="number" class="inpuntnewtask">
         </div>
 
+
+        <div @click="deleteclient" class="btne">Borrar Cliente</div>
         <div class="error">{{error}}</div>
 
     </div>

@@ -32,6 +32,11 @@ class Client {
         await conn.modClient( clientId, name, hourlyRate )
         return  'ok'
     }
+    async deleteClient(clientId: number) {
+        const conn = new repo.Client
+        await conn.deleteClient( clientId )
+        return  'ok'
+    }
 
 }
 

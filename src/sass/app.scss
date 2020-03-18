@@ -326,6 +326,28 @@ h1 {
 }
 
 
+#modcustomer {
+  .btne {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:  center;
+    align-content: stretch;
+    align-items: center;
+    height: 65px;
+    line-height: 24px;
+    cursor: pointer;
+    width: 100%;
+  }
+
+
+}
+
+
+
+
+
+
 
 
 

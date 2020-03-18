@@ -5,6 +5,7 @@ Simple offline application to control the time and cost of all your customer's t
 
 ## Functionalities:
 * Languages: Spanish, English.
+* Curencies: €, &, $, ¥, Kr, Fr, ₩, ₸, ₮, ₴, ฿, ₽, ₱, R$.
 * Detailed PDF export with custom header.
 * CSV export.
 * Light or dark theme.

@@ -24,7 +24,7 @@
                 <div class="col-6">
                     <ul>
                         <li>Idiomas: Castellano, Inglés.</li>
-                        <li>Monedas: €, &, $, ¥, Kr, Fr, ₩.</li>
+                        <li>Monedas: €, &, $, ¥, Kr, Fr, ₩, ₸, ₮, ₴, ฿, ₽, ₱, R$.</li>
                         <li>Exportación detallada de PDF con encabezado personalizado.</li>
                         <li>Exportación CSV.</li>
                         <li>Tema claro u oscuro.</li>

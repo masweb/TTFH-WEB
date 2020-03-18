@@ -4,18 +4,18 @@
 Simple offline application to control the time and cost of all your customer's tasks. Exports to CVS and detailed monthly PDF reports with custom header. Local IndexDB database, JSON import - export.
 
 ## Functionalities:
+* Languages: Spanish, English.
+* Detailed PDF export with custom header.
+* CSV export.
+* Light or dark theme.
 * Customer: create, modify and delete, name and cost per hour.
-* Task: create, modify and delete, name and cost per hour.
-* Comment per task: create, modify and delete, text.
+* Task: create, change and delete, name and cost per hour.
+* Comment by task.
 * Automatic recording of time fragments of each task, possibility of selective deletion.
 * Display of time and cost of each task in real time.
-* On-the-fly recalculation of the cost of all time fragments for all tasks and clients, based on the cost per task hour and/or Client. 
-* CSV export
-* Detailed PDF export with custom header.
-* Export database in JSON.
-* Import database in JSON.
-* Removal database.
-
+* Recosting on the fly, based on the hourly cost of the task and/or client.
+* Historical navigation for months.
+* Import, export database in JSON..
  
 ## Project setup
 ```

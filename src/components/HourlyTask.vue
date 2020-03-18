@@ -95,7 +95,7 @@
                <span @click="switchedit">
                     <i class="fas fa-times-circle"></i>
                 </span>
-                 <span @click="sethourlytozero"  v-show="istaskprice">
+                 <span @click="sethourlytozero"  v-show="istaskprice" class="cycancel">
                     <i class="fas fa-lock"></i>
                 </span>
             </span>

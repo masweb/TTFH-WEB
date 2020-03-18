@@ -164,7 +164,7 @@
 
             <div class="task" v-bind:class="{ active: task.running }">
                 <div @click="playnewtask(task.id)" v-show="!task.running" class="player btn" v-if="checkactualmonth(task.datecode)" ><i class="fas fa-play"></i></div>
-                <div @click="stoptask(task.id)" class="player btn" v-show="task.running" v-bind:class="{ active: !task.running }"><i class="fas fa-pause"></i></div>
+                <div @click="stoptask(task.id)" class="player btn stop" v-show="task.running" v-bind:class="{ active: !task.running }"><i class="fas fa-pause"></i></div>
 <!--                <div class="name">{{task.task}}</div>-->
                 <EditTaskName :taskId="task.id" :task="task.task"/>
 
@@ -178,14 +178,14 @@
                 <hourly-task :hourlyRate="client.hourlyRate" :taskId="task.id" v-if="runningtasks==0" />
 
                 <span v-show="task.opencoment==false">
-                    <div @click="togglenote(task.id)" v-show="task.note==''" class="openhistory btn"><i class="far fa-comment"></i></div>
-                    <div @click="togglenote(task.id)" v-show="task.note!=''" class="openhistory btn"><i class="fas fa-comment"></i></div>
+                    <div @click="togglenote(task.id)" v-show="task.note==''" class="openhistory btn "><i class="far fa-comment"></i></div>
+                    <div @click="togglenote(task.id)" v-show="task.note!=''" class="openhistory btn "><i class="fas fa-comment"></i></div>
                 </span>
 
                 <div @click="togglenote(task.id)" v-show="task.opencoment" class="openhistory btn"><i class="fas fa-angle-double-up"></i></div>
 
-                <div @click="togglehistory(task.id)"  class="openhistory btn"><i class="fas fa-list"></i></div>
-                <div @click="deletetask(task.id)"  v-if="runningtasks==0" class="openhistory btn"><i class="fa fa-times-circle"></i></div>
+                <div @click="togglehistory(task.id)"  class="openhistory btn cyfirst"><i class="fas fa-list"></i></div>
+                <div @click="deletetask(task.id)"  v-if="runningtasks==0" class="openhistory btn cydelete"><i class="fa fa-times-circle"></i></div>
             </div>
 
             <div class="note" v-show="task.opencoment">

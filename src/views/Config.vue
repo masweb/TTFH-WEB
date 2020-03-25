@@ -59,17 +59,16 @@
     <div id="config" class="config">
         <div class="container">
             <div class="row">
-                <div >
+
+                <div class="col" style="margin-right: 150px" >
                     <h1>{{$t('Language')}}</h1>
                     <select v-model="$i18n.locale" @change="setlang" class="select-css">
                         <option v-for="(lang, i) in langs" :key="`Lang${i}`" :value="lang">{{ lang }}</option>
                     </select>
                 </div>
-            </div>
-            <div class="espaconfig"></div>
 
-            <div class="row">
-                <div class=" ">
+
+                <div class="col" >
                     <h1>{{$t('Currencie')}}</h1>
                     <select v-model="lcurrencie"   class="select-css">
                         <option v-for="(mon, i) in currencies" :key="i" :value="mon">{{ mon }}</option>

@@ -36,7 +36,36 @@
   "Delete": "Eliminar",
   "Maximum": "Máximo",
   "Do you import ?": "¿ Quiere importar el contenido de la exportación ?, los datos actuales de la aplicación serán sustituidos por estos, si no los has exportado, se perderán para siempre.",
-  "Do you delete ?": "¿ Quiere borrar toda la base de datos ?, si no ha exportado los datos, estos se perderán para siempre."
+  "Do you delete ?": "¿ Quiere borrar toda la base de datos ?, si no ha exportado los datos, estos se perderán para siempre.",
+
+  "if you work": "Si trabajas con ordenador, esta es la solución gratuita para controlar tu tiempo y tus ganancias.",
+  "Simple application": "Sencilla aplicación offline para controlar el tiempo y el coste de todas las tareas de tus clientes. Exporta a CVS y genera informes mensuales detallados en PDF con encabezado personalizado. Base de datos local IndexDB, importación y exportación JSON.",
+  "Functionalities": "Funcionalidades",
+  "Languages": "Idiomas: Castellano, Inglés.",
+  "Currencies": "Monedas",
+  "Detailed PDF": "Exportación detallada de PDF con encabezado personalizado.",
+  "CSV export": "Exportación CSV.",
+  "Light or dark theme": "Tema claro u oscuro.",
+  "Customer: create": "Cliente: crear, modificar y borrar, nombre y coste por hora.",
+  "Task: create": "Tarea: crear, modificar y borrar, nombre y coste por hora.",
+  "Comments per task": "Comentario por tarea.",
+  "Automatic recording": "Registro automático de los fragmentos de tiempo de cada tarea, posibilidad de borrado selectivo.",
+  "Display of time": "Visualización del tiempo y el coste de cada tarea en tiempo real.",
+  "Recalculation": "Recálculo sobre la marcha del coste, al cambiar el coste por hora de tarea o Cliente.",
+  "Historical navigation": "Navegación de histórico por meses.",
+  "ImportExportJSON": "Importa y exporta la base de datos en JSON."
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

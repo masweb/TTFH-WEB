@@ -36,7 +36,37 @@
   "Delete": "Delete",
   "Maximum": "Maximum",
   "Do you import ?": "Do you want to import the content of the export, the current data of the application will be replaced by these, if you have not exported them, they will be lost forever.",
-  "Do you delete ?": "Do you want to delete the entire database? If you have not exported the data, it will be lost forever."
+  "Do you delete ?": "Do you want to delete the entire database? If you have not exported the data, it will be lost forever.",
+
+  "if you work": "If you work with a computer, this is the free solution to control your time and profits.",
+  "Simple application": "Simple offline application to control the time and cost of all your customers' tasks. Export to CVS and generate detailed monthly PDF reports with custom header. Local IndexDB database, JSON import and export.",
+  "Functionalities": "Functionalities",
+  "Languages": "Languages: Spanish, English.",
+  "Currencies": "Currencies",
+  "Detailed PDF": "Detailed PDF export with custom header.",
+  "CSV export": "CSV export.",
+  "Light or dark theme": "Light or dark theme.",
+  "Customer: create": "Customer: create, modify and delete, name and cost per hour.",
+  "Task: create": "Task: create, change and delete, name and cost per hour.",
+  "Comments per task": "Comments per task.",
+  "Automatic recording": "Automatic recording of the time fragments of each task, possibility of selective deletion.",
+  "Display of time": "Display of time and cost of each task in real time.",
+  "Recalculation": "Recalculation on the fly of the cost, by changing the cost per hour of task or Client.",
+  "Historical navigation": "Historical navigation for months.",
+  "ImportExportJSON": "Import and export the database in JSON."
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

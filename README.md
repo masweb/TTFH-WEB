@@ -50,15 +50,22 @@ yarn lint
 ### Main dependencies
 
  [Vue](https://github.com/vuejs/vue)
+ 
+ [TypeScript](https://github.com/microsoft/TypeScript)
 
-[Vuex](https://github.com/vuejs/vuex)
-
-[Moment](https://github.com/moment/moment)
 
 [Dexie](https://github.com/dfahlander/Dexie.js)
 
+
+[Moment](https://github.com/moment/moment)
+
 [EasyTimer](https://github.com/albert-gonzalez/easytimer.js)
 
+
 [jsPDF](https://github.com/MrRio/jsPDF)
+
+[Vuex](https://github.com/vuejs/vuex)
+
 ### Customize configuration
+
 See [Configuration Reference](https://cli.vuejs.org/config/).

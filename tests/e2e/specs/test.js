@@ -58,7 +58,7 @@ describe('Delete Database', () => {
     it('Visits the app root url', () => {
         cy.visit('http://localhost:8080/')
         cy.get('.btn.conf').first().click()
-        cy.get('.btn.expimp').eq(3).click()
+        cy.get('.btn.expimp').eq(2).click()
         cy.get('button.vue-dialog-button').eq(1).click()
 
     })

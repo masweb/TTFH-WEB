@@ -2,6 +2,7 @@ import domain from './domain'
 import repo from './repos/indexdb'
 import { Iclient, Itasks, Itimedetail } from './interfaces'
 
+
 class Client {
 
     async all() {

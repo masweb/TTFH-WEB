@@ -161,11 +161,6 @@ export default new Vuex.Store({
        },
 
 
-
-
-
-
-
        calcTime(state ) {
            let totaltask = 0.0
            let totalduration = 0.0

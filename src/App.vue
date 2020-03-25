@@ -26,17 +26,16 @@
          },
 
         mounted(): void {
-            const checklang = localStorage.getItem('tthlang')
-            if (checklang != null) {
-               this.$i18n.locale = localStorage.getItem('tthlang')
-            }
+            setTimeout( () => {
+                const checklang = localStorage.getItem('tthlang')
+                if (checklang != null) this.$i18n.locale = localStorage.getItem('tthlang')
+            }, 0)
             const checkcurr = localStorage.getItem('tthlang')
             if (checkcurr != null) {
                 this.$i18n.locale = localStorage.getItem('ttcurrencie')
                 this.$store.commit('setCurencie', localStorage.getItem('ttcurrencie'))
             } else {
                 this.$store.commit('setCurencie', '€')
-
             }
             this.$store.commit('setClients')
         },

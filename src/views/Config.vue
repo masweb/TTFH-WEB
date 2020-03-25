@@ -25,7 +25,8 @@
             if (this.theme == 'dark') this.enabled = false
             else this.enabled = true
             this.lcurrencie = this.currencie
-        },
+            this.$i18n.locale = localStorage.getItem('tthlang')
+         },
         computed: {
             ...mapState(['theme', 'langs', 'currencies', 'currencie']),
 

@@ -18,7 +18,7 @@
     "easytimer": "^1.1.1",
     "indexeddbshim": "^6.1.0",
     "json2csv": "^4.5.4",
-    "jspdf": "^1.5.3",
+    "jspdf": "^2.3.1",
     "moment": "^2.24.0",
     "vue": "^2.6.11",
     "vue-i18n": "^8.15.7",
